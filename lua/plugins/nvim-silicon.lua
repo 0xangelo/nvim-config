@@ -24,7 +24,7 @@ return {
       -- (in hexcode string e.g "#076678")
       background = nil,
       -- a path to a background image
-      background_image = "/home/doom/Pictures/wallpapers/astronaut.png",
+      background_image = "/home/doom/Pictures/wallpapers/others/nixos-catppuccin-center-small.png",
       -- the paddings to either side
       pad_horiz = 100,
       pad_vert = 80,
