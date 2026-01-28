@@ -62,7 +62,7 @@ return {
 
               rustfmt = {
                 extraArgs = {
-                  "+nightly-2025-10-29%",
+                  "+nightly-2025-10-29",
                 },
               },
             },
