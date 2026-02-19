@@ -7,6 +7,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.gruvbox-nvim" },
+  { import = "astrocommunity.colorscheme.gruvbox-baby" },
   { import = "astrocommunity.pack.hyprlang" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.toml" },
