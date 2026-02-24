@@ -9,6 +9,7 @@ return {
     vim.list_extend(opts.servers, {
       "rust_analyzer",
       "taplo",
+      "lua_ls",
       -- add more servers as needed...
     })
     opts.config = opts.config or {}
