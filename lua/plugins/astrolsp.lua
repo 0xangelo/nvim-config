@@ -10,6 +10,7 @@ return {
       "rust_analyzer",
       "taplo",
       "lua_ls",
+      "nixd",
       -- add more servers as needed...
     })
     opts.config = opts.config or {}
