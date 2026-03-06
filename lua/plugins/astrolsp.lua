@@ -11,6 +11,7 @@ return {
       "taplo",
       "lua_ls",
       "nixd",
+      "hyprls",
       -- add more servers as needed...
     })
     opts.config = opts.config or {}
