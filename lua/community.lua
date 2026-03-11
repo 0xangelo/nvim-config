@@ -6,5 +6,6 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.colorscheme.gruvbox-baby" },
+  { import = "astrocommunity.git.octo-nvim"},
   -- import/override with your plugins folder
 }
