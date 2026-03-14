@@ -12,6 +12,7 @@ return {
       "lua_ls",
       "nixd",
       "hyprls",
+      "bashls",
       -- add more servers as needed...
     })
     opts.config = opts.config or {}
