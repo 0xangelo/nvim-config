@@ -13,6 +13,7 @@ return {
       "nixd",
       "hyprls",
       "bashls",
+      "markdown_oxide",
       -- add more servers as needed...
     })
     opts.config = opts.config or {}
