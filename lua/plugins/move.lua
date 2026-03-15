@@ -13,18 +13,12 @@ return {
     opts = {
       servers = {
         move_analyzer = {
-          cmd = { "move-analyzer" },          -- usually not needed if in PATH
-          -- but if you want to be explicit / override:
-          -- cmd = { "/full/path/to/move-analyzer" },
-
+          cmd = { "move-analyzer" },
           filetypes = { "move" },
 
           -- root_dir patterns (important for project detection)
           -- Most Move projects have Move.toml at the root
           root_dir = require("lspconfig.util").root_pattern("Move.toml", ".git"),
-
-          -- If your move-analyzer supports extra settings (rarely needed)
-          -- settings = { ... },
         },
       },
     },
