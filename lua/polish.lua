@@ -16,3 +16,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
 vim.api.nvim_create_autocmd("VimLeave", {
   callback = function() vim.cmd "silent !kitty @ set-spacing margin=default" end,
 })
+
+vim.opt.wrap = true          -- enable visual line wrapping
+vim.opt.linebreak = true     -- wrap at word boundaries (don't split words)
