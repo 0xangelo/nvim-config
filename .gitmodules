@@ -1,0 +1,3 @@
+[submodule "submodules/tree-sitter-move"]
+	path = submodules/tree-sitter-move
+	url = git@github.com:0xangelo/tree-sitter-move.git
