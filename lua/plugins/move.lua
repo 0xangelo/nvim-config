@@ -1,3 +1,4 @@
+if true then return {} end -- Comment this to re-enable move-analyzer LSP integration
 return {
   {
     "AstroNvim/astrolsp",
