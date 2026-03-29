@@ -1,0 +1,2 @@
+# Reason: init.lua is managed by Home Manager in NixOS
+init.lua
