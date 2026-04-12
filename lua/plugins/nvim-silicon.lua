@@ -19,22 +19,22 @@ return {
       -- Example: font = "VictorMono NF=34;Noto Emoji",
       font = nil,
       -- the theme to use, depends on themes available to silicon
-      theme = "Dracula",
+      theme = "gruvbox-dark",
       -- the background color outside the rendered os window
       -- (in hexcode string e.g "#076678")
       background = nil,
       -- a path to a background image
-      background_image = "/home/doom/Pictures/wallpapers/others/nixos-catppuccin-center-small.png",
+      background_image = "/home/doom/nixos/wallpapers/gruvbox/train-upscaled.png",
       -- the paddings to either side
-      pad_horiz = 100,
-      pad_vert = 80,
+      pad_horiz = 20,
+      pad_vert = 20,
       -- whether to have the os window rendered with rounded corners
       no_round_corner = false,
       -- whether to put the close, minimize, maximise traffic light
       -- controls on the border
       no_window_controls = true,
       -- whether to turn off the line numbers
-      no_line_number = false,
+      no_line_number = true,
       -- with which number the line numbering shall start
       -- line_offset = 1,
       -- here a function is used to return the actual source code line number
