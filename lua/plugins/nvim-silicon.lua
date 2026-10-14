@@ -24,7 +24,11 @@ return {
       -- (in hexcode string e.g "#076678")
       background = nil,
       -- a path to a background image
-      background_image = "/home/doom/nixos/wallpapers/gruvbox/train-upscaled.png",
+      -- the wallpaper only exists on the NixOS machine
+      background_image = (function()
+        local wallpaper = vim.fn.expand "~/nixos/wallpapers/gruvbox/train-upscaled.png"
+        if vim.fn.filereadable(wallpaper) == 1 then return wallpaper end
+      end)(),
       -- the paddings to either side
       pad_horiz = 20,
       pad_vert = 20,

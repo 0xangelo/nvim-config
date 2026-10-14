@@ -1,3 +1,18 @@
+-- nixd's option completion comes from the flake that configures this machine.
+local function nixd_options()
+  local flake, system, name
+  if vim.fn.has "mac" == 1 then
+    flake, system, name = "~/git/0xangelo/darwin-config", "darwinConfigurations.dawn", "nix_darwin"
+  else
+    flake, system, name = "~/nixos", "nixosConfigurations.dusk", "nixos"
+  end
+  local options = ('(builtins.getFlake "%s").%s.options'):format(vim.fn.expand(flake), system)
+  return {
+    [name] = { expr = options },
+    home_manager = { expr = options .. ".home-manager.users.type.getSubOptions []" },
+  }
+end
+
 return {
   "AstroNvim/astrolsp",
   -- we must use the function override because table merging
@@ -11,11 +26,11 @@ return {
       "taplo",
       "lua_ls",
       "nixd",
-      "hyprls",
       "bashls",
       "markdown_oxide",
       -- add more servers as needed...
     })
+    if vim.fn.has "linux" == 1 then table.insert(opts.servers, "hyprls") end
     opts.config = opts.config or {}
     opts.config = vim.tbl_extend("error", opts.config, {
       rust_analyzer = {
@@ -65,14 +80,7 @@ return {
             formatting = {
               command = { "alejandra" }, -- or nixfmt or nixpkgs-fmt
             },
-            options = {
-              nixos = {
-                  expr = '(builtins.getFlake "/home/doom/nixos-config").nixosConfigurations.laptop.options',
-              },
-              home_manager = {
-                  expr = '(builtins.getFlake "/home/doom/nixos-config").nixosConfigurations.laptop.options.home-manager.users.type.getSubOptions []',
-              },
-            },
+            options = nixd_options(),
           },
         },
       },
